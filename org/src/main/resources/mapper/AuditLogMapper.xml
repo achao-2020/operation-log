@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.achao.org.mapper.AuditLogMapper">
+
+    <resultMap id="BaseResultMap" type="com.achao.org.dao.AuditLog">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="logId" column="log_id" jdbcType="VARCHAR"/>
+            <result property="tenantId" column="tenant_id" jdbcType="VARCHAR"/>
+            <result property="tenantName" column="tenant_name" jdbcType="VARCHAR"/>
+            <result property="logLevel" column="log_level" jdbcType="VARCHAR"/>
+            <result property="actionName" column="action_name" jdbcType="VARCHAR"/>
+            <result property="detail" column="detail" jdbcType="VARCHAR"/>
+            <result property="requestUrl" column="request_url" jdbcType="VARCHAR"/>
+            <result property="resourceType" column="resource_type" jdbcType="VARCHAR"/>
+            <result property="resourceName" column="resource_name" jdbcType="VARCHAR"/>
+            <result property="resourceId" column="resource_id" jdbcType="VARCHAR"/>
+            <result property="result" column="result" jdbcType="TINYINT"/>
+            <result property="errorMsg" column="error_msg" jdbcType="VARCHAR"/>
+            <result property="actionType" column="action_type" jdbcType="VARCHAR"/>
+            <result property="visitorIp" column="visitor_ip" jdbcType="VARCHAR"/>
+            <result property="requestParam" column="request_param" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,log_id,tenant_id,
+        tenant_name,log_level,action_name,
+        detail,request_url,resource_type,
+        resource_name,resource_id,result,
+        error_msg,action_type,visitor_ip,
+        request_param
+    </sql>
+</mapper>

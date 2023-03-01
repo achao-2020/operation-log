@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.achao.audit.config.AuditLogAutoConfiguration,\
+com.achao.audit.config.DesensitizeConfiguration,\
+com.achao.audit.config.AuditProcessorConfiguration
